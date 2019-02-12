@@ -1,15 +1,27 @@
 {{ define "main" }}
 
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
-    </div>
-    <div class="cms mw6">
+<article>
+    <div class="container">
+        <header>
+            <h2 class="title xs-show">{{.Title}}</h2>		
+            <div class="meta">{{ .Date.Format "Jan 2, 2006" }}</div>			
+        </header>
+
+        <section>
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
+        </section>
+      
+        <footer>
+            <p class="author">
+                <a rel="author" href="/author/alan" title="Alan Chatfield"><img src="//www.gravatar.com/avatar/60fa755d6b89ee9f9d59d0f957711f40?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"></a>
+                Written by <strong><a rel="author" href="/author/alan" title="Alan Chatfield">Alan Chatfield</a></strong><br>
+                <span class="muted">Senior Digital Marketing Strategist at <a href="//www.crmtechnologies.com">CRMT</a> and Marketo Certified Solutions Architect. Advisor on marketing effectiveness and marketing technology optimisation.</span>
+            </p>
+        </footer>
+      
+      
     </div>
-  </div>
+</article>      
 {{ end }}
