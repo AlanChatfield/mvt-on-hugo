@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Description) }}
+
 <article>
     <div class="container">
         <header>
@@ -8,8 +10,6 @@
         </header>
 
         <section>
-      <p>{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
         </section>
       
