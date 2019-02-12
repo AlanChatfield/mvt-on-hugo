@@ -1,23 +1,21 @@
-{{ if gt .Paginator.TotalPages 1 }}
  
 	<footer class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
-    {{ if .Paginator.HasNext }}
+    {{ if .NextInSection }}
 			<div class="nav-previous">
-				<a href="{{ .Paginator.Next.URL }}" rel="prev">
+				<a href="{{ .NextInSection.URL }}" rel="prev">
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-left"></i></div> 
 					<div class="meta-nav"><span class="small-part">Previous Post</span>
-						<div class="next-prev-name">{{ .Paginator.Next.Title }}</div>
+						<div class="next-prev-name">{{ .NextInSection.Title }}</div>
 					</div>
 				</a>
 			</div>
     {{ end }}
-    <div class="pagination">
-        {{ if .Paginator.HasPrev }}
+        {{ if .PrevInSection }}
 			<div class="nav-next">
-				<a href="{{ .Paginator.Prev.URL }}" rel="next">
+				<a href="{{ .PrevInSection.URL }}" rel="next">
 					<div class="meta-nav"><span class="small-part">Next Post</span>
-						<div class="next-prev-name">{{ .Paginator.Prev.Title }}</div>
+						<div class="next-prev-name">{{ .PrevInSection.Title }}</div>
 					</div>
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-right"></i></div>
 				</a>
