@@ -1,18 +1,29 @@
 {{ if gt .Paginator.TotalPages 1 }}
  
-<nav class="cf pa3">
+	<footer class="navigation post-navigation" role="navigation">
+		<div class="nav-links">
     {{ if .Paginator.HasNext }}
-    <a class="fl dib link dim black f6 f5-ns b pa2" title="Next Page" href="{{ .Paginator.Next.URL }}">
-        &larr; Previous
-    </a>
+			<div class="nav-previous">
+				<a href="{{ .Paginator.Next.URL }}" rel="prev">
+					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-left"></i></div> 
+					<div class="meta-nav"><span class="small-part">Previous Post</span>
+						<div class="next-prev-name">{{ .Paginator.Next.Title }}</div>
+					</div>
+				</a>
+			</div>
     {{ end }}
     <div class="pagination">
         {{ if .Paginator.HasPrev }}
-        <a class="fl dib link dim black f6 f5-ns b pa2" title="Previous Page" href="{{ .Paginator.Prev.URL }}">
-            Next &rarr;
-        </a>
+			<div class="nav-next">
+				<a href="{{ .Paginator.Prev.URL }}" rel="next">
+					<div class="meta-nav"><span class="small-part">Next Post</span>
+						<div class="next-prev-name">{{ .Paginator.Prev.Title }}</div>
+					</div>
+					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-right"></i></div>
+				</a>
+			</div>
         {{ end }}
-    </div>
-</nav>
+		</div>
+	</footer>
  
 {{ end }}
