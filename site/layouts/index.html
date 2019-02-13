@@ -28,6 +28,8 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ partial "blog"}}
+		{{ range first 3 (where .Data.Pages "Type" "post") }}
+			{{ .Render "li" }}
+		{{ end }} 
 	</article>
 	</div>    
