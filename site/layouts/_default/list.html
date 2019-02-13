@@ -4,9 +4,7 @@
 
 <article class="container">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
-          <section class="index img"> 
             {{ .Render "li"}}
-          </section>
       {{ end }}
   {{ partial "pagination" . }}
 </article>
