@@ -2,12 +2,32 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "short-text" .Params.blurb}}
+	<article class="container grid long">			
+			<section class="index img">
+				<div class="container author">
+					<img src="//www.gravatar.com/avatar/60fa755d6b89ee9f9d59d0f957711f40?s=250&d=mm&r=x">
+					<h2>Hello,</h2>
+					<p>I am Alan Chatfield, Senior Digital Marketing Strategist at <a href="//www.crmtechnologies.com">CRMT</a>. 
+					<br><br>										
+					Welcome to my personal blog. I write about marketing technology and B2B marketing, with a primary focus on how marketers can make the most effective use of their martech stack.<br><br>
+					<a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p>	
+					</nav>				
+				</div>
+			</section>
 
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
+			{{ range first 1 (where .Data.Pages "Type" "post") }}
+					{{ .Render "li" }}
+			{{ end }}	
+	</article>
 
 {{ end }}
+
+	<article class="container grid noimg opinion">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/opinion">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>News & Current Affairs</h2>
+		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
+		{{ partial "blog"}}
+	</article>
+	</div>    
