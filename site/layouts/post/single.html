@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Description "Permalink" (.Permalink  | absURL)) }}
+{{ partial "jumbotron" . }}
 
 <article>
     <div class="container">
