@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Description) }}
+{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.Description) }}
 
 <article class="container">
       {{ range (.Paginator 10).Pages.ByPublishDate.Reverse }}
