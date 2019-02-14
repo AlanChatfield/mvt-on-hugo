@@ -20,7 +20,7 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ range first 3 (where .Data.Pages "Type" "post") }}
+		{{ range first 3 (where .Data.Pages "Section" "post") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
