@@ -20,19 +20,40 @@
 <div class="{{partial "categoryurl" .}}">
 			{{ end }}	
 
-{{ range first 4 (where site.Params.mainSections) }}
-	<article class="container grid opinion">	
+	<article class="container grid {{.Params.section1.link}}">	
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="{{.Permalink}}">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
-		<h2>{{.title}}</h2>
-		<p>{{.description}}</p>
-		{{ range first 3 (where .Data.Pages) }}
+		<h2>{{.Params.section1.heading}}</h2>
+		<p>{{.Params.section2.text}}</p>
+		{{ range first 3 (where .Data.Pages "Section" {{.Params.section1.link}}) }}
 			{{ .Render "li" }}
 		{{ end }} 
-	</article>	
-{{ end }} 	
-	<article class="container grid opinion">	
+	</article>
+	
+	<article class="container grid {{.Params.section2.link}}">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section2.heading}}</h2>
+		<p>{{.Params.section2.text}}</p>
+		{{ range first 3 (where .Data.Pages "Section" {{.Params.section2.link}}) }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+	
+	<article class="container grid {{.Params.section3.link}}">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section3.heading}}</h2>
+		<p>{{.Params.section3.text}}</p>
+		{{ range first 3 (where .Data.Pages "Section" {{.Params.section3.link}}) }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+	
+	<article class="container grid noimg opinion">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/opinion">See more <span aria-hidden="true">→</span></a>
 		</nav>		
