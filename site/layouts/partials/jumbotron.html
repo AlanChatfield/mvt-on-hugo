@@ -1,4 +1,4 @@
-<div class="blog-cover" style="background-image: url('{{ with .Params.image }}{{ . }}{{ end }}')">
+<div class="blog-cover {{.Params.bannerStyle}}" style="background-image: url('{{ with .Params.image }}{{ . }}{{ end }}')">
     <section>
         <div class="container">
             <h1 class="title">{{.Title}}</h1>
