@@ -1,0 +1,8 @@
+{{ $taxonomy := "categories" }}
+{{ with .Param $taxonomy }}
+    {{ range $index, $category := . }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $category) -}}
+          {{ $category }}
+      {{- end -}}
+    {{- end -}}
+{{ end }}
