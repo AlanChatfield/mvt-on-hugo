@@ -1,6 +1,6 @@
 ---
 title: "Demand Marketing"
-description: "Views from the intersection of digital marketing and enterprise technology"
+description: "Learn, optimise and engage using modern marketing techniques"
 image: "https://source.unsplash.com/fzOITuS1DIQ/1920x1080"
 banner: dark
 type: "posts"
