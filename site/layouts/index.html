@@ -48,7 +48,7 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ range first 3 (where .Data.Pages "Section" .Params.section3.link) }}
+		{{ range first 3 (where .Data.Pages "Categories" "Marketing Automation") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
@@ -59,7 +59,7 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ range first 3 (where .Data.Pages "Section" "opinion") }}
+		{{ range first 3 (where .Data.Pages "Categories" "Test") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
