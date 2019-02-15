@@ -4,8 +4,8 @@ date: 2019-02-15T08:30:00.000Z
 description: This quarter's release brings a new form layout editor and a greater emphasis on the app marketplace. The major new features for 2019 are still to come.
 image: "https://source.unsplash.com/ZoiZOkh1pbc/1920x1080"
 banner: "bottom-align"
-categories: [Marketing-Automation]
-tags: [Eloqua, Releases]
+tags: ["Eloqua","Releases"]
+categories: ["Marketing Automation"]
 ---
 2018 was a big year for Eloqua. The once dominant marketing automation platform has been losing customers to their competitors, whilst their status as thought leader was usurped by Marketo years ago. Instead, the product appeared to be neglected as Oracle Marketing Cloud chased high profile opportunities in the B2C space with Responsys and BlueKai. Change was clearly needed, and over the course of last year a succession of new features and major updates delivered it. As a result, many of the biggest usability issues that have dogged the platform since its inception have finally been resolved. For the first time, the platform has responsive email and landing page templates that are simple enough for a standard marketing user to manipulate. Steps are being taken to modernise admin screens and native integrations beset by a UI that hasn't been updated since the days of Eloqua 9 over a decade ago. The first release of 2019 drops this weekend with further improvements in these areas.
 
