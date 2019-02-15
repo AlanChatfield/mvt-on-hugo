@@ -16,16 +16,29 @@
 
 			{{ range first 1 (where .Data.Pages "Type" "post") }}
 					{{ .Render "li" }}
+	</article>				
+<div class="{{partial categoryurl .}}">
 			{{ end }}	
-	</article>
 
+{{ with .Data.Pages "Section" "martech" }}
+	<article class="container grid opinion">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="{{.Permalink}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.title}}</h2>
+		<p>{{.description}}</p>
+		{{ range first 3 (where .Data.Pages "Section" "martech") }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>	
+{{ end }} 	
 	<article class="container grid opinion">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/opinion">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ range first 3 (where .Data.Pages "Section" "post") }}
+		{{ range first 3 (where .Data.Pages "Section" "opinion") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
