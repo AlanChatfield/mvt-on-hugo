@@ -1,7 +1,7 @@
 ---
 title: "About CRMT"
 description: "I am a Senior Digital Marketing Strategist at CRMT. Get in touch with them if you want further advice or support with the marketing topics discussed on these pages."
-image: "https://source.unsplash.com/IpLa37Uj2Dw/1920x1080"
+image: "/img/li.jpg"
 ---
 
                 <p class="author" style="display: block; padding-bottom: 1.5em">
