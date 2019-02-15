@@ -6,7 +6,17 @@
     <div class="container">
         <header>
             <h2 class="title xs-show">{{.Title}}</h2>		
-            <div class="meta">{{ .Date.Format "2 January 2006" }} | <a href="{{ .Permalink }}">{{ $category }}</a> 
+            <div class="meta">{{ .Date.Format "2 January 2006" }} |
+                
+{{ $taxonomy := "categories" }}
+{{ with .Param $taxonomy }}
+    {{ range $index, $category := . }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $category) -}}
+          <a href="{{ .Permalink }}">{{ $category }}</a> 
+      {{- end -}}
+    {{- end -}}
+{{ end }}                
+                
 </div>			
         </header>
 
