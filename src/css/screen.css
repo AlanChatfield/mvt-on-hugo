@@ -464,9 +464,9 @@ a:hover{color:#00578A;text-decoration:none}
 .home-template .blog-cover .btn.btn-outline { color: #fff; border: 1.5px solid #fff;  margin-top: 1.5em; font-weight: 400; }
 .blog-cover{height:50vh;min-height:425px;background-color:#111;background-size:cover;background-position:center center;z-index:1}
 .bottom-align {background-position:bottom center;}
-.custom-bottom-align {object-position:bottom;}
+.avatar.bottom-align {object-position:bottom;}
 .top-align {background-position:top center;}
-.custom-top-align {object-position:top;}
+.avatar.top-align {object-position:top;}
 .tag-asides .blog-cover, .tag-politics .blog-cover { background-position: top 20% center; }
 .blog-cover.index-cover { height:325px;min-height:325px; } 
 .blog-cover section{text-align:center;background-color:rgba(0,0,0,0.4);background:radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.15));height:100%;display:flex;align-items:center;}
@@ -733,7 +733,10 @@ article.long .index:last-of-type .avatar {
     max-width: 680px;
     min-width: 680px;
 }
-article.long .index:last-of-type .avatar.custom-bottom {
+article.long .index:last-of-type .avatar.bottom-align {
+	object-position: bottom;
+}
+article.long .index:last-of-type .avatar.top-align {
 	object-position: bottom;
 }	
 article.long .index:last-of-type {
