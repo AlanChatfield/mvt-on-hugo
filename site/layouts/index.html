@@ -20,14 +20,14 @@
 <div class="{{partial "categoryurl" .}}">
 			{{ end }}	
 
-{{ with .Data.Pages "Section" "martech" }}
+{{ range where site.Params.mainSections) }}
 	<article class="container grid opinion">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="{{.Permalink}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.title}}</h2>
 		<p>{{.description}}</p>
-		{{ range first 3 (where .Data.Pages "Section" "martech") }}
+		{{ range first 3 (where .Data.Pages) }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>	
