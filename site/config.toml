@@ -4,3 +4,5 @@ title = "Alan Chatfield"
 preserveTaxonomyNames = true
 [permalinks]
   post = "/:title/"
+[params]
+  mainSections = ["marketing", "technology","martech","opinion"]
