@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle .bannerStyle "home") }}
 
 	<article class="container grid long">			
 			<section class="index img">
