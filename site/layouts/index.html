@@ -17,7 +17,7 @@
 			{{ range first 1 (where .Data.Pages "Type" "post") }}
 					{{ .Render "li" }}
 	</article>				
-<div class="{{partial categoryurl .}}">
+<div class="{{partial "categoryurl" .}}">
 			{{ end }}	
 
 {{ with .Data.Pages "Section" "martech" }}
