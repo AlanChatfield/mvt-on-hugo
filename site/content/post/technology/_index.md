@@ -1,6 +1,6 @@
 ---
 title: "Digital Transformation"
-description: "Views from the intersection of digital marketing and enterprise technology"
+description: "Commentary on enterprise technology and it's impact on business"
 image: "https://source.unsplash.com/466ENaLuhLY/1920x1080"
 banner: dark
 type: "posts"
