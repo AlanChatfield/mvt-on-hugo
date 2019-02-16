@@ -41,21 +41,14 @@
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
-<ul id="all-tags">
-    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
-        {{ end }}
-    {{ end }}
-</ul>	
+
 	<article class="container grid {{.Params.section3.link}}">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ range $key, $taxonomy := .Site.Taxonomies.tags.Releases }}
-		{{ range first 3 $taxonomy.Pages }}
+		{{ range first 3 (where .Site.Pages ".Params.tags" "intersect" "marketing-automation") }}
 			{{ .Render "li" }}
 		{{ end }} 
 		{{ end }} 
@@ -67,7 +60,7 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ range first 3 (where .Data.Pages "Section" "Post") }}
+		{{ range first 3 (where .Data.Pages "Params.topic" "Marketing Automation") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
