@@ -41,7 +41,13 @@
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
-	
+<ul id="all-tags">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>	
 	<article class="container grid {{.Params.section3.link}}">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
