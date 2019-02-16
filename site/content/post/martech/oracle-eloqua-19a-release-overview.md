@@ -1,7 +1,7 @@
 ---
 title: "Oracle Eloqua 19A Release Overview"
-tags: ["Eloqua","Releases"]
-categories: ["Marketing Automation"]
+tags: ["Marketing Automation","Eloqua","Releases"]
+topic: "Marketing Automation"
 date: 2019-02-15T08:30:00.000Z
 description: This quarter's release brings a new form layout editor and a greater emphasis on the app marketplace. The major new features for 2019 are still to come.
 image: "https://source.unsplash.com/ZoiZOkh1pbc/1920x1080"
