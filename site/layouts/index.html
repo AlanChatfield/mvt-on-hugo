@@ -17,10 +17,10 @@
 			{{ range first 1 (where .Data.Pages "Type" "post") }}
 					{{ .Render "li" }}
 	</article>				
-<div class="{{.Params.topic}}">
+<div class="{{.Params.topic | urlize}}">
 			{{ end }}	
 
-	<article class="container grid demand.creation">	
+	<article class="container grid demand-creation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
