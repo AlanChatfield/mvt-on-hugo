@@ -48,7 +48,7 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ range first 3 (where .Site.Pages ".Params.tags" "intersect" "marketing-automation") }}
+		{{ range first 3 (where .Site.Pages ".Params.tags" "intersect" "Releases") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
