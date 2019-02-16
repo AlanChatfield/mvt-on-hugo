@@ -54,7 +54,7 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ range $key, $taxonomy := .Site.Taxonomies.tags.releases }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.tags.Releases }}
 		{{ range first 3 $taxonomy.Pages }}
 			{{ .Render "li" }}
 		{{ end }} 
