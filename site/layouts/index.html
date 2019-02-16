@@ -49,7 +49,7 @@
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
 		{{ $taggedContent := .Site.Taxonomies.categories.martech.Pages }}
-		{{{ range first 3 $taggedContent }}
+		{{ range first 3 $taggedContent }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
