@@ -1,5 +1,6 @@
 ---
 title: "Oracle Eloqua 19A Release Overview"
+categories: ["Marketing Technology"]
 tags: ["Marketing Automation","Eloqua","Releases"]
 topic: "Marketing Automation"
 date: 2019-02-15T08:30:00.000Z
