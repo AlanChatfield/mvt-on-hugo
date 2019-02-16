@@ -17,10 +17,10 @@
 			{{ range first 1 (where .Data.Pages "Type" "post") }}
 					{{ .Render "li" }}
 	</article>				
-<div class="{{partial "categoryurl" .}}">
+<div class="{{.Params.topic}}">
 			{{ end }}	
 
-	<article class="container grid {{.Params.section1.link}}">	
+	<article class="container grid demand.creation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
@@ -31,7 +31,7 @@
 		{{ end }} 
 	</article>
 	
-	<article class="container grid {{.Params.section2.link}}">	
+	<article class="container grid digital-transformation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
@@ -42,7 +42,7 @@
 		{{ end }} 
 	</article>
 
-	<article class="container grid {{.Params.section3.link}}">	
+	<article class="container grid marketing-automation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
