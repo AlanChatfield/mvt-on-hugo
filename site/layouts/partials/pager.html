@@ -1,21 +1,21 @@
  
 	<footer class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
-    {{ if .NextInSection }}
+    {{ if .PrevInSection }}
 			<div class="nav-previous">
-				<a href="{{ .NextInSection.URL }}" rel="prev">
+				<a href="{{ .PrevInSection.URL }}" rel="prev">
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-left"></i></div> 
 					<div class="meta-nav"><span class="small-part">Previous Post</span>
-						<div class="next-prev-name">{{ .NextInSection.Title }}</div>
+						<div class="next-prev-name">{{ .PrevInSection.Title }}</div>
 					</div>
 				</a>
 			</div>
     {{ end }}
-        {{ if .PrevInSection }}
+        {{ if .NextInSection }}
 			<div class="nav-next">
-				<a href="{{ .PrevInSection.URL }}" rel="next">
+				<a href="{{ .NextInSection.URL }}" rel="next">
 					<div class="meta-nav"><span class="small-part">Next Post</span>
-						<div class="next-prev-name">{{ .PrevInSection.Title }}</div>
+						<div class="next-prev-name">{{ .NextInSection.Title }}</div>
 					</div>
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-right"></i></div>
 				</a>
