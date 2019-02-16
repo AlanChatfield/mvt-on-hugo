@@ -1,8 +1,1 @@
-{{ $taxonomy := "categories" }}
-{{ with .Param $taxonomy }}
-    {{ range $index, $category := . }}
-      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $category) -}}
-          <a href="{{ .Permalink }}">{{ $category }}</a>
-      {{- end -}}
-    {{- end -}}
-{{ end }}
+          <a href="/tag/{{ .Params.topic | urlize }}">{{ .Params.topic }}</a>
