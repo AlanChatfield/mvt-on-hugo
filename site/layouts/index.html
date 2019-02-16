@@ -51,7 +51,6 @@
 		{{ range first 3 (where .Site.Pages ".Params.tags" "intersect" "marketing-automation") }}
 			{{ .Render "li" }}
 		{{ end }} 
-		{{ end }} 
 	</article>
 	
 	<article class="container grid noimg opinion">	
