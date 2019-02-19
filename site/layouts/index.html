@@ -26,8 +26,8 @@
 		</nav>		
 		<h2>{{.Params.section1.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ $taggedContent1 := .Site.Taxonomies.categories.marketing.Pages }}
-		{{ range first 4 $taggedContent1 }}
+		{{ $taggedContent1 := .Site.Taxonomies.categories.marketing.Pages }}			
+		{{ range first 4 (where .Data.Pages "Params.topic" "Marketing Operations") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
@@ -38,8 +38,8 @@
 		</nav>		
 		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ $taggedContent2 := .Site.Taxonomies.categories.technology.Pages }}
-		{{ range first 4 $taggedContent2 }}
+		{{ $taggedContent2 := .Site.Taxonomies.categories.technology.Pages }}		
+		{{ range first 4 (where .Data.Pages "Params.topic" "Digital Technology") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
@@ -63,7 +63,7 @@
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
 		{{ $taggedContent4 := .Site.Taxonomies.categories.opinion.Pages }}
-		{{ range first 4 $taggedContent4 }}
+		{{ range first 4 (where .Data.Pages "Params.topic" "Politics") }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
