@@ -3,8 +3,9 @@
   publish = "dist"
 [build.environment]
   YARN_VERSION = "1.9.4"
-
+  HUGO_VERSION = "0.34"
+  
 [context.deploy-preview]
   command = "yarn build-preview"
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.34"
+  HUGO_VERSION = "0.54.0"
