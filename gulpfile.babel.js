@@ -50,23 +50,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("svg", () => {
-  const svgs = gulp
-    .src("site/static/img/icons-*.svg")
-    .pipe(svgmin())
-    .pipe(svgstore({inlineSvg: true}));
-
-  function fileContents(filePath, file) {
-    return file.contents.toString();
-  }
-
-  return gulp
-    .src("site/layouts/partials/svg.html")
-    .pipe(inject(svgs, {transform: fileContents}))
-    .pipe(gulp.dest("site/layouts/partials/"));
-});
-
-gulp.task("server", ["hugo", "css", "js", "svg"], () => {
+gulp.task("server", ["hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -74,7 +58,6 @@ gulp.task("server", ["hugo", "css", "js", "svg"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./site/static/img/icons-*.svg", ["svg"]);
   gulp.watch("./site/**/*", ["hugo"]);
 });
 
